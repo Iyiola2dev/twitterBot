@@ -20,3 +20,9 @@ const tweet = async () =>{
         console.error (error);
     }
 };
+
+const job = new CronJob("45 14 * * *", ()=>{
+    tweet();
+});
+
+job.start();
